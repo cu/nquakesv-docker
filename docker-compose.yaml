@@ -1,0 +1,12 @@
+services:
+  qw:
+    image: docker.io/bityard/nquakesv
+    environment:
+      - RCON_PASSWORD=${RCON_PASSWORD}
+      - HOSTNAME=${HOSTNAME}
+      - PORT=${PORT}
+      - SERVER_ADMIN=${SERVER_ADMIN}
+      - REPORT_URL=${REPORT_URL}
+      - REPORT_KEY=${REPORT_KEY}
+    ports:
+      - "27500:27500/udp"
